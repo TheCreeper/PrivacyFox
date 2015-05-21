@@ -5,7 +5,7 @@ PrivacyFox tweaks various preferences in Firefox in order to enhance the privacy
 
 | Preference                           | Default | New   | Description |
 |--------------------------------------|---------|-------|-------------|
-| media.peerconnection.enabled         | true    | false |             |
+| media.peerconnection.enabled         | true    | false | WebRTC leaks a users IP address from behind a VPN or proxy. |
 | network.websocket.enabled            | true    | false |             |
 | network.http.sendRefererHeader       | 2       | 0     |             |
 | network.http.sendSecureXSiteReferrer | true    | false |             |
@@ -21,6 +21,8 @@ PrivacyFox tweaks various preferences in Firefox in order to enhance the privacy
 | browser.safebrowsing.enabled         | true    | false |             |
 | browser.send_pings                   | true    | false |             |
 | webgl.disabled                       | false   | true  |             |
+
+## WebRTC
 
 ## building the XPI
 ```
