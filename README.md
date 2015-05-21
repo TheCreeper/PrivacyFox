@@ -19,6 +19,9 @@ PrivacyFox tweaks various preferences in Firefox in order to enhance the privacy
 | browser.safebrowsing.enabled         | true    | false | Disable Google Safe Browsing and phishing protection. Security risk, but privacy improvement. |
 | browser.safebrowsing.malware.enabled | true    | false | Disable Google Safe Browsing malware checks. Security risk, but privacy improvement. |
 | browser.send_pings                   | true    | false | Allows websites to track users clicks. |
+| browser.cache.disk.enable            | true    | false | Disables caching on hardrive. |
+| browser.cache.disk_cache_ssl         | true    | false | Disables caching for ssl connections. |
+| browser.cache.offline.enable         | true    | false | Disables the offline disk cache. |
 | webgl.disabled                       | false   | true  | WebGL is a potential security risk. [source](http://security.stackexchange.com/questions/13799/is-webgl-a-security-concern) |
 
 ## building the XPI

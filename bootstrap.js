@@ -59,6 +59,15 @@ var privacyPrefs =
       // Allows websites to track users clicks.
       {pref : "browser.send_pings", set : false, type : "bool"},
 
+      // Disables caching on hardrive.
+      {pref : "browser.cache.disk.enable", set : false, type : "bool"},
+
+      // Disables caching on hardrive for ssl connections.
+      {pref : "browser.cache.disk_cache_ssl", set : false, type : "bool"},
+
+      // Disables the offline disk cache.
+      {pref : "browser.cache.offline.enable", set : false, type : "bool"},
+
       // WebGL is a potential security risk.
       {pref : "webgl.disabled", set : false, type : "bool"}
 ];
