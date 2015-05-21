@@ -6,15 +6,14 @@ var privacyPrefs =
       // WebRTC can leak a users IP address from behind a VPN or proxy.
       {pref : "media.peerconnection.enabled", set : false, type : "bool"},
 
-      // WebSockets is a technology that makes it possible to open an
-      // interactive communication session between the user's browser and a
-      // server.
+      // Websockets can cause some dns requests to not be send over the active
+      // proxy.
       {pref : "network.websocket.enabled", set : false, type : "bool"},
 
-      // Disable referrer headers.
+      // Tells the server which page the user came from.
       {pref : "network.http.sendRefererHeader", set : 0, type : "int"},
 
-      // Disable referrer headers between https websites.
+      // Tells the server which https page the user came from.
       {
 	pref : "network.http.sendSecureXSiteReferrer",
 	set : false,
