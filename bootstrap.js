@@ -6,6 +6,11 @@ var privacyPrefs =
       // Disable Webrtc
       {pref : "media.peerconnection.enabled", set : false, type : "bool"},
 
+      // WebSockets is a technology that makes it possible to open an
+      // interactive communication session between the user's browser and a
+      // server.
+      {pref : "network.websocket.enabled", set : false, type : "bool"},
+
       // Disable referrer headers.
       {pref : "network.http.sendRefererHeader", set : 0, type : "int"},
 
@@ -16,15 +21,18 @@ var privacyPrefs =
 	type : "bool"
       },
 
+      // Number of cached DNS entries. Lower number = More requests but less
+      // data stored.
+      {pref : "network.dnsCacheEntries", set : 100, type : "int"},
+
+      // Time DNS entries are cached in seconds.
+      {pref : "network.dnsCacheExpiration", set : 60, type : "int"},
+
       // This is Mozilla’s new built in tracking protection.
       {pref : "privacy.trackingprotection.enabled", set : true, type : "bool"},
 
       // Disables geolocation.
       {pref : "geo.enabled", set : false, type : "bool"},
-
-      // Disable Google Safe Browsing and phishing protection. Security risk,
-      // but privacy improvement.
-      {pref : "browser.safebrowsing.enabled", set : false, type : "bool"},
 
       // Disable Google Safe Browsing malware checks. Security risk, but privacy
       // improvement.
@@ -43,26 +51,18 @@ var privacyPrefs =
       {pref : "dom.event.contextmenu.enabled", set : false, type : "bool"},
 
       // Disables firefox logging geolocation requests.
-      {pref : "geo.wifi.logging.enabled ", set : false, type : "bool"},
-
-      // Number of cached DNS entries. Lower number = More requests but less
-      // data stored.
-      {pref : "network.dnsCacheEntries", set : 100, type : "int"},
-
-      // Time DNS entries are cached in seconds.
-      {pref : "network.dnsCacheExpiration", set : 60, type : "int"},
+      {pref : "geo.wifi.logging.enabled", set : false, type : "bool"},
 
       // Disables saving of formdata.
       {pref : "browser.formfill.enable", set : false, type : "bool"},
 
+      // Disable Google Safe Browsing and phishing protection. Security risk,
+      // but privacy improvement.
+      {pref : "browser.safebrowsing.enabled", set : false, type : "bool"},
+
       // The attribute would be useful for letting websites track visitors’
       // clicks.
       {pref : "browser.send_pings", set : false, type : "bool"},
-
-      // WebSockets is a technology that makes it possible to open an
-      // interactive communication session between the user's browser and a
-      // server.
-      {pref : "network.websocket.enabled", set : false, type : "bool"},
 
       // WebGL is a potential security risk.
       {pref : "webgl.disabled", set : false, type : "bool"}
