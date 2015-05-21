@@ -5,24 +5,22 @@ PrivacyFox tweaks various preferences in Firefox in order to enhance the privacy
 
 | Preference                           | Default | New   | Description |
 |--------------------------------------|---------|-------|-------------|
-| media.peerconnection.enabled         | true    | false | WebRTC leaks a users IP address from behind a VPN or proxy. |
-| network.websocket.enabled            | true    | false |             |
+| media.peerconnection.enabled         | true    | false | WebRTC can leak a users IP address from behind a VPN or proxy. |
+| network.websocket.enabled            | true    | false |  |
 | network.http.sendRefererHeader       | 2       | 0     |             |
 | network.http.sendSecureXSiteReferrer | true    | false |             |
 | network.dnsCacheEntries              | 400     | 100   |             |
 | network.dnsCacheExpiration           | 60      | 60    |             |
-| privacy.trackingprotection.enabled   | false   | true  |             |
-| geo.enabled                          | true    | false |             |
-| browser.safebrowsing.malware.enabled | true    | false |             |
-| dom.event.clipboardevents.enabled    | true    | false |             |
-| dom.event.contextmenu.enabled        | true    | false |             |
-| geo.wifi.logging.enabled             | true    | false |             |
-| browser.formfill.enable              | true    | false |             |
-| browser.safebrowsing.enabled         | true    | false |             |
-| browser.send_pings                   | true    | false |             |
-| webgl.disabled                       | false   | true  |             |
-
-## WebRTC
+| privacy.trackingprotection.enabled   | false   | true  | This is Mozilla’s new built in tracking protection. |
+| dom.event.clipboardevents.enabled    | true    | false | Disable that websites can get notifications if you copy, paste, or cut something from a web page, and it lets them know which part of the page had been selected. |
+| dom.event.contextmenu.enabled        | true    | false | Disables website control over rightclick context menu. |
+| geo.enabled                          | true    | false | Disables geolocation. |
+| geo.wifi.logging.enabled             | true    | false | Disables logging geolocation requests. |
+| browser.formfill.enable              | true    | false | Disables saving of formdata. |
+| browser.safebrowsing.enabled         | true    | false | Disable Google Safe Browsing and phishing protection. Security risk, but privacy improvement. |
+| browser.safebrowsing.malware.enabled | true    | false | Disable Google Safe Browsing malware checks. Security risk, but privacy improvement. |
+| browser.send_pings                   | true    | false | Allows websites to track users clicks. |
+| webgl.disabled                       | false   | true  | WebGL is a potential security risk. [source](http://security.stackexchange.com/questions/13799/is-webgl-a-security-concern) |
 
 ## building the XPI
 ```

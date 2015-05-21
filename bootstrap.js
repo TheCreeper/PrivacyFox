@@ -3,7 +3,7 @@ Cu.import('resource://gre/modules/Services.jsm');
 
 var privacyPrefs =
     [
-      // Disable Webrtc
+      // WebRTC can leak a users IP address from behind a VPN or proxy.
       {pref : "media.peerconnection.enabled", set : false, type : "bool"},
 
       // WebSockets is a technology that makes it possible to open an
@@ -31,17 +31,6 @@ var privacyPrefs =
       // This is Mozilla’s new built in tracking protection.
       {pref : "privacy.trackingprotection.enabled", set : true, type : "bool"},
 
-      // Disables geolocation.
-      {pref : "geo.enabled", set : false, type : "bool"},
-
-      // Disable Google Safe Browsing malware checks. Security risk, but privacy
-      // improvement.
-      {
-	pref : "browser.safebrowsing.malware.enabled",
-	set : false,
-	type : "bool"
-      },
-
       // Disable that websites can get notifications if you copy, paste, or cut
       // something from a web page, and it lets them know which part of the page
       // had been selected.
@@ -49,6 +38,9 @@ var privacyPrefs =
 
       // Disables website control over rightclick context menu.
       {pref : "dom.event.contextmenu.enabled", set : false, type : "bool"},
+
+      // Disables geolocation.
+      {pref : "geo.enabled", set : false, type : "bool"},
 
       // Disables firefox logging geolocation requests.
       {pref : "geo.wifi.logging.enabled", set : false, type : "bool"},
@@ -60,8 +52,15 @@ var privacyPrefs =
       // but privacy improvement.
       {pref : "browser.safebrowsing.enabled", set : false, type : "bool"},
 
-      // The attribute would be useful for letting websites track visitors’
-      // clicks.
+      // Disable Google Safe Browsing malware checks. Security risk, but privacy
+      // improvement.
+      {
+	pref : "browser.safebrowsing.malware.enabled",
+	set : false,
+	type : "bool"
+      },
+
+      // Allows websites to track users clicks.
       {pref : "browser.send_pings", set : false, type : "bool"},
 
       // WebGL is a potential security risk.
