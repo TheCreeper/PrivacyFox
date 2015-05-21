@@ -10,7 +10,6 @@ PrivacyFox tweaks various preferences in Firefox in order to enhance the privacy
 | network.http.sendRefererHeader       | 2       | 0     | Tells the server which page the user came from. |
 | network.http.sendSecureXSiteReferrer | true    | false | Tells the server which https page the user came from. |
 | network.dnsCacheEntries              | 400     | 100   | Number of cached DNS entries (lower number=more requests but less data stored). |
-| network.dnsCacheExpiration           | 60      | 60    | The time in which dns cached entries are expired. |
 | privacy.trackingprotection.enabled   | false   | true  | This is Mozilla’s new built in tracking protection. |
 | dom.event.clipboardevents.enabled    | true    | false | Websites can get notifications if you copy, paste, or cut something from a web page, and it lets them know which part of the page had been selected. |
 | dom.event.contextmenu.enabled        | true    | false | Disables website control over rightclick context menu. |

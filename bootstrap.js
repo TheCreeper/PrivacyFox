@@ -24,9 +24,6 @@ var privacyPrefs =
       // data stored.
       {pref : "network.dnsCacheEntries", set : 100, type : "int"},
 
-      // Time DNS entries are cached in seconds.
-      {pref : "network.dnsCacheExpiration", set : 60, type : "int"},
-
       // This is Mozilla’s new built in tracking protection.
       {pref : "privacy.trackingprotection.enabled", set : true, type : "bool"},
 
