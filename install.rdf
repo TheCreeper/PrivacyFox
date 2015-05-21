@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+	<Description about="urn:mozilla:install-manifest">
+		<em:id>{a9dbd5c7-1de8-4526-80f3-a296e6b0e7af}</em:id>
+		<em:version>0.1</em:version>
+		<em:type>2</em:type>
+		<em:bootstrap>true</em:bootstrap>
+		<em:unpack>false</em:unpack>
+
+		<!-- Firefox -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>7.0</em:minVersion>
+				<em:maxVersion>*</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+
+		<!-- Front End MetaData -->
+		<em:name>PrivacyFox</em:name>
+		<em:description>PrivacyFox attemts to disable/enable various features in firefox in order to enhance privacy.</em:description>
+		<em:creator>TheCreeper</em:creator>
+	</Description>
+</RDF>
