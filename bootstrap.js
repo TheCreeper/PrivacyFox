@@ -4,6 +4,9 @@ Cu.import('resource://gre/modules/Services.jsm');
 var privacyPrefs =
     [
 
+      // Disable Webrtc
+      {pref : "media.peerconnection.enabled", set : false, type : "bool"},
+
       // Disable referrer headers.
       {pref : "network.http.sendRefererHeader", set : 0, type : "int"},
 

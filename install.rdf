@@ -19,7 +19,7 @@
 
 		<!-- Front End MetaData -->
 		<em:name>PrivacyFox</em:name>
-		<em:description>PrivacyFox attemts to disable/enable various features in firefox in order to enhance privacy.</em:description>
+		<em:description>PrivacyFox attemts to disable/enable various features in firefox in order to enhance privacy. A list of all the offending config settings can be found on the homepage; some of these include webrtc (disabled), geolocation (disabled), and webgl (disabled).</em:description>
 		<em:creator>TheCreeper</em:creator>
 		<em:homepageURL>https://github.com/TheCreeper/PrivacyFox</em:homepageURL>
 	</Description>
