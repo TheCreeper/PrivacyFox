@@ -26,5 +26,5 @@ PrivacyFox tweaks various preferences in Firefox in order to enhance the privacy
 
 ## building the XPI
 ```
-zip privacyfox.xpi bootstrap.js install.rdf
+make build
 ```
