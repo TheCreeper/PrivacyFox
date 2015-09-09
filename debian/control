@@ -1,0 +1,15 @@
+Source: privacyfox
+Maintainer: dc0 <dc0@firebit.co.uk>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 9), mozilla-devscripts
+
+Package: xul-ext-privacyfox
+Architecture: all
+Depends: ${misc:Depends}, ${xpi:Depends}
+Recommends: ${xpi:Recommends}
+Breaks: ${xpi:Breaks}
+Provides: ${xpi:Provides}
+Enhances: ${xpi:Enhances}
+Description: Privacy enhancing extension for firefox.

@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with xul-ext
+
+override_dh_auto_build:
+	xpi-pack . xul-ext-privacyfox.xpi
+
+override_dh_auto_install:
+	install-xpi xul-ext-privacyfox.xpi
+
+override_dh_auto_clean:
+	rm xul-ext-privacyfox.xpi

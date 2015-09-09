@@ -15,9 +15,9 @@ var privacyPrefs =
 
       // Tells the server which https page the user came from.
       {
-	pref : "network.http.sendSecureXSiteReferrer",
-	set : false,
-	type : "bool"
+      pref : "network.http.sendSecureXSiteReferrer",
+      set : false,
+      type : "bool"
       },
 
       // Number of cached DNS entries. Lower number = More requests but less
@@ -28,8 +28,8 @@ var privacyPrefs =
       {pref : "privacy.trackingprotection.enabled", set : true, type : "bool"},
 
       // Disable that websites can get notifications if you copy, paste, or cut
-      // something from a web page, and it lets them know which part of the page
-      // had been selected.
+      // something from a web page, and it lets them know which part of the
+      // page had been selected.
       {pref : "dom.event.clipboardevents.enabled", set : false, type : "bool"},
 
       // Disables website control over rightclick context menu.
@@ -48,12 +48,12 @@ var privacyPrefs =
       // but privacy improvement.
       {pref : "browser.safebrowsing.enabled", set : false, type : "bool"},
 
-      // Disable Google Safe Browsing malware checks. Security risk, but privacy
-      // improvement.
+      // Disable Google Safe Browsing malware checks. Security risk, but
+      // privacy improvement.
       {
-	pref : "browser.safebrowsing.malware.enabled",
-	set : false,
-	type : "bool"
+      pref : "browser.safebrowsing.malware.enabled",
+      set : false,
+      type : "bool"
       },
 
       // Allows websites to track users clicks.
@@ -82,35 +82,32 @@ function uninstall(data, reason) { resetPrivacyPrefs(); }
 
 function setPrivacyPrefs()
 {
-	for (i = 0; i < privacyPrefs.length; i++) {
-
-		switch (privacyPrefs[i]["type"]) {
-
-			case "int":
-				Services.prefs.setIntPref(
-				    privacyPrefs[i]["pref"],
-				    privacyPrefs[i]["set"]);
-				break;
-			case "bool":
-				Services.prefs.setBoolPref(
-				    privacyPrefs[i]["pref"],
-				    privacyPrefs[i]["set"]);
-				break;
-			case "char":
-				Services.prefs.setCharPref(
-				    privacyPrefs[i]["pref"],
-				    privacyPrefs[i]["set"]);
-				break;
-			default:
-				break;
-		}
-	}
+      for (i = 0; i < privacyPrefs.length; i++) {
+            switch (privacyPrefs[i]["type"]) {
+                  case "int":
+                        Services.prefs.setIntPref(
+                            privacyPrefs[i]["pref"],
+                            privacyPrefs[i]["set"]);
+                        break;
+                  case "bool":
+                        Services.prefs.setBoolPref(
+                            privacyPrefs[i]["pref"],
+                            privacyPrefs[i]["set"]);
+                        break;
+                  case "char":
+                        Services.prefs.setCharPref(
+                            privacyPrefs[i]["pref"],
+                            privacyPrefs[i]["set"]);
+                        break;
+                  default:
+                        break;
+            }
+      }
 }
 
 function resetPrivacyPrefs()
 {
-	for (i = 0; i < privacyPrefs.length; i++) {
-
-		Services.prefs.clearUserPref(privacyPrefs[i]["pref"]);
-	}
+      for (i = 0; i < privacyPrefs.length; i++) {
+            Services.prefs.clearUserPref(privacyPrefs[i]["pref"]);
+      }
 }

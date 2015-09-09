@@ -1,0 +1,5 @@
+xul-ext-privacyfox (2015.08.01) unstable; urgency=medium
+
+  * Create deb package.
+
+ -- Jason Ayre <dc0@firebit.co.uk>  Sat, 01 Aug 2015 18:13:31 +0100
