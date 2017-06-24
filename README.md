@@ -34,7 +34,7 @@ online.
 			<td>network.websocket.enabled</td>
 			<td>true</td>
 			<td>false</td>
-			<td>Websockets can cause some dns requests to not be send over the active proxy.</td>
+			<td>Websockets can cause some dns requests to not be sent over the active proxy.</td>
 		</tr>
 		<tr>
 			<td>network.http.sendRefererHeader</td>
